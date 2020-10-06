@@ -25,4 +25,11 @@ export class AppComponent {
       console.log('Run in browser');
     }
   }
+
+  off(): void {
+    this.electronService.send(0);
+  }
+  on(): void {
+    this.electronService.send(1);
+  }
 }
